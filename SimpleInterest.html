@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Interest Calculator</title>
+</head>
+<body>
+	<form>
+		<input type="text" id="principle" placeholder="Principle">
+		<input type="text" id="rate" placeholder="Rate">	
+		<input type="text" id="time" placeholder="Time">
+		<button type="button" onclick="calculateSimpleInterest()">Calculate Simple Interest</button><br>
+		<label for="result">Result:</label>
+		<input type="text" id="result" disabled>
+	</form>
+	
+	<script>
+		function calculateSimpleInterest() {
+			var principle = parseFloat(document.getElementById("principle").value);
+			var rate = parseFloat(document.getElementById("rate").value);
+			var time = parseFloat(document.getElementById("time").value);
+			var interest = (principle * rate * time) / 100;
+			
+			document.getElementById("result").value = interest.toFixed(2);
+			
+	
+		}
+	</script>
+</body>
+</html>
